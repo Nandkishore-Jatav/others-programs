@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport", content="width=device-width, initial-scale=1">
+
+	<title>Object Orienter Programming</title>
+</head>
+<body>
+	<script type="text/javascript">
+		class hello{
+			name(){
+				console.log("Hello Mr. Nandkishore Jatav");
+			}
+			age(){
+				console.log("1) Year age is :22");
+			}
+		}
+		let a = new hello();
+		a.name();
+		a.age();
+		
+		//********************************
+		class student{
+			constructor(name, age, course){
+				this.studentName = name,
+				this.studentAge = age,
+				this.studentcourse = course
+				console.log("How are you?");
+			};
+			message(){
+				console.log("Hellow Mr. " + this.studentName + "your age is : " + this.studentAge + " of " + this.course)  
+
+			}
+
+		}
+		var b, c, d;
+
+		b = new student("2) Nandkishore Jatav ", 22, "B.tech");
+		c = new student("3) Nayan ", 21, "M.tech");
+		d = new student("4) suraj ", 23, "b.com");
+		b.message();
+		c.message();
+		d.message();
+		//****************************
+		class student_info{
+			//Constructor methods
+			constructor(name, age, course){
+				this.studentName = name,
+				this.studentAge = age,
+				this.studentcourse = course
+				// console.log("How are you?");
+			};
+			//Prototype Methods
+			message(){
+				console.log(`Hellow Mr. ${this.studentName} your age is :  ${this.studentAge} of  ${this.studentcourse} `)  
+			}
+			//static Methods
+			static names(){
+			
+				console.log("Nandkishore Jatav Om ");
+			}	
+		}
+
+		var e, f, g, h;
+
+		e = new student_info("5) Nandkishore Jatav ", 22, "B.tech");
+		f = new student_info("6) Nayan ", 21, "M.tech");
+		g = new student_info("7) suraj ", 23, "b.com");
+		h = new student_info("Rustom ", 25, "B.com")
+		e.message();
+		f.message();
+		g.message();
+		// h.names();
+		student_info.names();
+
+	</script>
+</body>
+</html>

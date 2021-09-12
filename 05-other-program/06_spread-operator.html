@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sprear operator</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		function sum(name, course, ...args) {
+			console.log(arguments);
+			document.write(`hello ${name} of ${course} :`);
+			let sum = 0;
+			for (let om in args) {
+				sum += args[om];
+			}
+			document.write(sum + "<br>");
+			console.log(sum);
+		}
+		var arrs = [23, 343, 3432, 564];
+		sum("Nandkishore Jatav", "B.tech", ...arrs);
+		//******************************
+		document.write([...arrs] + "<br>");
+		console.log("2)", [...arrs]);
+		//******************************
+		let arr1 = [78, 73, 89, 473, 863, 489, 83];
+		let arr2 = arr1;
+		document.write(arr2 + "<br>");
+		console.log("3) " + arr2)
+		//******************************
+		var ars1 = [10, 546, 564, 425, 5465, 54];
+		var ars2 = [54, 654, 54, 5646, 46];
+
+		var ars3 = ars1.concat(ars2);
+		document.write(ars3 + "<br>");
+		//******************************
+		var ars4 = [45, 654, 354, 65];
+		ars4.push(34);
+		var ars5 = ars4;
+
+		console.log(ars5);
+		console.log(ars4);
+
+		document.write(ars4 + "<br>");
+		document.write(ars5 + "<br>");
+		//*******************************
+		var arry1 = [54, 46, 546, 54, 324, 54, 806];
+		var arry2 = [23, 216, 84, 04, 94, 68, 45, 411];
+		var arry3 = [786, ...arry1, ...arry2, 786];
+		document.write(arry3 + "<br>");
+	</script>
+</body>
+
+</html>

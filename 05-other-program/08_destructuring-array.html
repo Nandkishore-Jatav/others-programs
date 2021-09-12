@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta nam = viewport, content="width=devide-width, initial-scale=1">
+	<title>Destructuring Array</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Destructuring Array
+
+		var informetion = ["Nandkishore", " Jatav", " Indore", " 2021", ["male", "540000"]];
+		var [fname, lname, city, year, age, gender, saraly] = informetion ;
+		console.log(informetion);
+		document.write(fname);
+		document.write(lname);
+		document.write(city);
+		document.write(year);
+		document.write(age);
+		document.write(gender);
+		document.write(saraly);
+
+		//***********************
+		var arry = ["Nayan", "Jatav", "Indore"]
+		var fullname = [fname + lname];
+		var [fullname, ...args] = arry;
+		console.log(fullname);
+		console.log(args);
+		//***********************
+		function user([fname, lname, years, city]){
+			console.log(fname);
+			console.log(lname);
+			console.log(year);
+			console.log(city);
+		};
+		user(["Nandkishore", "Jatav", 2022, "Indore"]);
+		//***********************
+		function use(){
+			return ["Nandkishore", "Jatav", 2022, "Indore"]
+			
+		};
+		var [fname, lname, years, city] = use();
+		console.log(fname, lname, years, city);
+	</script>
+</body>
+</html>

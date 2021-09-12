@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Destructuring Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//Destructuring Array
+
+		var informetion = {
+				fname :"Nandkishore",
+				lname :" Jatav",
+				city :" Indore", 
+				year :" 2021", 
+				age : 22,
+				gender : "male", 
+				saraly: "540000"
+			};
+		var {fname, lname, city, year, age, gender, saraly} = informetion;
+		console.log(informetion);
+		document.write(informetion.fname + "<br>");
+		document.write(informetion.lname + "<br>");
+		document.write(informetion.city + "<br>");
+		document.write(informetion.year + "<br>");
+		document.write(informetion.age + "<br>");
+		document.write(informetion.gender + "<br>");
+		document.write(informetion.saraly + "<br>");
+
+		//***********************
+		var arry = {
+			fnm : "Nayan",
+			lnm : " Jatav",
+			city : "Indore"
+		}
+
+		// var fullname = fnm.concat(lnm);
+		var {fnm, lnm, ...args} = arry;
+		
+		console.log(fnm.concat(lnm));
+
+		console.log(args);
+		//***********************
+		function user({fname, lname, years, city}){
+			console.log(fname);
+			console.log(lname);
+			console.log(years);
+			console.log(city);
+		};
+		user({
+				fname :"Nandkishore", 
+				lname :"Jatav", 
+				years : 2021,
+				city: "Indore"
+			});
+		document.write(faname);
+		document.write(faname);
+		document.write(years);
+		document.write(city);
+		//***********************
+		function use(){
+			return {
+				faname :"Nandkishore",
+				laname : "Jatav",
+				yearss : 2022,
+				cities : "Indore"};
+			
+		};
+		var {faname, laname, yearss, cities} = use();
+		console.log(faname, laname, yearss, cities);
+		document.write("<br>" + faname + "<br>");
+		document.write(laname + "<br>");
+		document.write(yearss + "<br>");
+		document.write(cities + "<br>");
+
+	</script>
+</body>
+</html>

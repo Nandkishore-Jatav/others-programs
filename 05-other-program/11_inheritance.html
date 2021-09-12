@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Javascript Inheritance
+	</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict";
+		//Inheritance of base class
+		class student{
+			story(name){
+				// this.studentName = name,
+				// this.studentcourse = course,
+				document.write(`Good you are story ${name} <br>`)
+				console.log(`Good you are story ${name}`)
+			}
+
+		}
+		class poems extends student{
+			story(){
+
+				document.write(`Very good you are poem ${name} <br>`)
+				console.log(`Very good you are poem ${name}`)
+			}
+		}
+		let s = new student('Nandkishore');
+		let p = new poems("Nandkishore Jatav");
+		s.story();
+		p.story();
+		//***************************
+		//Inheritance of base class
+		// class students{
+		// 	story(names, age){
+		// 		this.studentName = names,
+		// 		this.studentAge = ages,
+		// 		console.log("Good you are story")
+		// 	}
+		// 	message(){
+		// 		console.log(`Hellow Mr. ${this.studentName} your age is :  ${this.studentAge} of  ${this.studentcourse} `)  
+		// 	}
+		// 	info(){
+		// 		console.log(`Enter your name : ${this.studentame} and your age ${this.studentage}`)
+		// 	}
+		// }
+		// var b = new students("Nandkishore Jatav", 22);
+		// var c = new students("Suraj Jatav", 25);
+		// b.message();
+		// c.info();
+
+	</script>
+</body>
+</html>

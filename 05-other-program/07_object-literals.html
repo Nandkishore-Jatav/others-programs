@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Object Literals</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var fname, lname, year, course;
+        fname = "Nandkishore";
+        lname = "Jatav";
+        year = "2021";
+        course = "B.tech";
+
+        let obj = {
+            fname,
+            lname,
+            year,
+            course
+        };
+        console.log(obj);
+        //*************************
+        var n, year, lname, course;
+            n = "Student";
+            year = "2022";
+            lname = "Jatav";
+            course = "BCA";
+
+        let objs = {
+            [n + "Name"] : "Nandkishore",
+            year,
+            lname,
+            course
+        };
+        console.log(objs)
+        document.write(objs.Name + "<br>");
+        document.write(objs.year + "<br>");
+        document.write(objs.lname + "<br>");
+        document.write(objs.course);
+        //**********************
+        var a, b, c;
+        a = "student";
+        b = "year";
+        c = "contact";
+
+        var object = {
+            [a + "Name"] : "Nandkishore",
+            [b] : "2022",
+            [c + 'Numbers'] : "9691713555",
+
+            detail(){
+                return `Hello ${this.studentName} ${this.year} ${this.contactNumbers}`
+            }
+        };   
+
+        document.write(object + "<br>");
+        console.log(object);
+        document.write(object.detail);
+        //*************************
+        var fullname, couses;
+        fullname = "Nandkishore Jatav";
+        couses = "B.com";
+
+       function functions(fullname, couses){
+            return {fullname, couses};
+        }
+        var f = functions(fullname, couses);
+        console.log(f);
+        //**************************
+        
+    </script>
+</body>
+</html>

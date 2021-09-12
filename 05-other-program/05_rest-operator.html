@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Rest operator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		"use strict"
+		//function first
+		function sum(){
+			console.log(arguments);
+			document.write(arguments + "<br><br>");
+		}
+
+		sum(354, 46, 654, 65);
+		//***************************
+
+		//function second
+		function sum(){
+			console.log(arguments);
+
+			let sum = 0;
+			for(let nayan in arguments){
+				sum += arguments[nayan];
+			}
+			document.write(sum + "<br><br>");
+		}
+		sum(33, 3476, 376);
+		sum(23, 23);
+
+		//*****************************
+		function sumFour(name, course, contact, year, ...args){
+			console.log(arguments);
+			document.write(`Hellow ${name} "${course}" ,"${contact}", "${year}" :`);
+			let sum = 0;
+			for(let nayan in args){
+				sum += args[nayan];
+			}
+			document.write(sum + "<br><br>");
+		} 		
+		var arr = [5465, 54654, 5465];
+
+		sumFour("Nandkishore Jatav", "B.tech", "9691713515", "2017-2021", 96917,684, 435, ...arr);
+		
+
+		//****************************
+		let sumthree =(name, year, ...args) => {
+			console.log(arguments);
+			document.write(`Hellow ${name} "${year}" `);
+			let sum = 0;
+			for(let s in args){
+				sum += args[s];
+			}
+			document.write(sum + "<br><br>");
+		}
+		document.write("Nandkishore Jatav", "2021", 545, 657, 24);
+	</script>
+			
+</body>
+</html>
